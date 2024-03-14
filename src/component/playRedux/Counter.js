@@ -7,8 +7,8 @@ export const Counter = ()=>{
     useEffect(() => {
         // 原生redux要使用 store.subscribe 订阅仓库的state
         const unsubscribe = store.subscribe(()=>{
-            const newCount = store.getState();
-            console.log('3333', store.getState())
+            const newCount = store.getState().CountingReducer;
+            // console.log('3333', store.getState().CountingReducer)
             // setCount(newCount)
             // 要用箭头函数
             setCount((prevState)=>{

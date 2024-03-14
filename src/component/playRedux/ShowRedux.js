@@ -5,7 +5,8 @@ export const ShowRedux = () => {
     const [initData, setInitData] = useState([]);
     useEffect(() => {
         const unsubscribe = store.subscribe(() => {
-            const newState = store.getState();
+            const newState = store.getState().NameReducer;
+            console.log('newState',newState)
             setInitData((prevState)=>{
                 return newState
             })

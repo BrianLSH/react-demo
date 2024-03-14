@@ -1,6 +1,7 @@
 const defaultState = [];
 // 形参也可以指定默认状态
 export default (state =defaultState,action)=>{
+    console.log()
     switch(action.type){
         case 'addName':
             return [...state, action.payLoad];
