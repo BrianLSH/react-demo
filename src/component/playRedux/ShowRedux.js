@@ -50,9 +50,8 @@ export const ShowRedux = () => {
                     {/*这将导致每次渲染时都会立即调用该函数，而不是在点击按钮时才调用。*/}
                     {/*<button onClick={killHim(index)}>枪毙</button>*/}
                     <button onClick={()=>{killHim(index)}}>删除</button>
-
-
                 </div>
+
                 )
             )}
             {/*{initData && initData.map((item, index)=>{*/}

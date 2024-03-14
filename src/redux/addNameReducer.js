@@ -6,7 +6,7 @@ export default (state =defaultState,action)=>{
         case 'addName':
             return [...state, action.payLoad];
         case 'kill':
-            console.log('ac', action)
+            // console.log('ac', action)
             return state.filter((item, index) => index !== action.payLoad.killIndex);
             // console.log('ac', action.payLoad)
             // return state.slice(0,action.payLoad.killIndex).concat(state.slice(action.payLoad.killIndex +1))

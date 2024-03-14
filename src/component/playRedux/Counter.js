@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import store from "../../redux/store";
+import {ShowRedux} from "./ShowRedux";
 export const Counter = ()=>{
 
 
@@ -33,6 +34,10 @@ export const Counter = ()=>{
         <button onClick={handlePlus}>+</button>
             当前值:<span>{initCount.count }</span>
         <button onClick={handleMinus}>-</button>
+
+            <div>
+                <ShowRedux />
+            </div>
         </>
     )
 }
