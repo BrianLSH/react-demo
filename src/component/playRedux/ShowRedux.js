@@ -47,7 +47,7 @@ export const ShowRedux = () => {
                     <span>{item.name}</span>
 
                     {/*在代码中，删除按钮只触发一次的问题是因为您在 onClick 属性中立即调用了 killHim(index) 函数。*/}
-                    {/*这将导致每次渲染时都会立即调用该函数，而不是在点击按钮时才调用。*/}
+                    {/*这将导致每次渲染时都会立即调用该函数，而不是在点击按钮时才调                                               用。*/}
                     {/*<button onClick={killHim(index)}>枪毙</button>*/}
                     <button onClick={()=>{killHim(index)}}>删除</button>
                 </div>

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import store from "../../redux/store";
 import {ShowRedux} from "./ShowRedux";
+import {AsyncCounter} from "./AsyncCounter";
 export const Counter = ()=>{
 
 
@@ -31,13 +32,26 @@ export const Counter = ()=>{
     }
     return(
         <>
-        <button onClick={handlePlus}>+</button>
-            当前值:<span>{initCount.count }</span>
-        <button onClick={handleMinus}>-</button>
-
             <div>
-                <ShowRedux />
+              <p>原生redux  redux-thunk异步+测试</p>
+              <p>原生redux  redux-promise异步-测试</p>
+                    <AsyncCounter/>
             </div>
+            <br/><br/><br/>
+            <div>
+                <p>
+                    原生redux 同步操作
+                </p>
+                <button onClick={handlePlus}>+</button>
+                当前值:<span>{initCount.count}</span>
+                <button onClick={handleMinus}>-</button>
+            </div>
+
+            <br/><br/><br/>
+            <div>
+                <ShowRedux/>
+            </div>
+
         </>
     )
 }
