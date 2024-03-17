@@ -1,11 +1,11 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux'
 
-import reduxLogger from 'redux-logger'
+// import reduxLogger from 'redux-logger'
 // import thunk from 'redux-thunk'
-import {thunk} from 'redux-thunk'
+// import {thunk} from 'redux-thunk'
 // import thunk from 'redux-thunk';
 
-// import {middleware} from "./Middleware/Middleware";
+import {middleware} from "./Middleware/Middleware";
 
 
 // 剥离出去
@@ -22,5 +22,5 @@ import rootReducer from "./reducers";
 
 // createStore第二个参数代表默认状态， 一般在reducer处理
 const store = createStore(rootReducer,
-    applyMiddleware(reduxLogger,thunk))
+    applyMiddleware(...middleware))
 export default store

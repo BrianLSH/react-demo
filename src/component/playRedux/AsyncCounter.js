@@ -1,7 +1,8 @@
 import react, {useEffect, useState} from "react";
 import store from "../../redux/store";
-import {getAsyncPlus} from "../../redux/ActionGenerator/AsyncActionCountGenerator";
-import AsyncAction from "../../redux/ActionGenerator/AsyncAction";
+// import {getAsyncPlus} from "../../redux/ActionGenerator/AsyncActionCountGenerator";
+// import AsyncAction from "../../redux/ActionGenerator/AsyncAction";
+import action from "../../redux/ActionGenerator/Index";
 export const AsyncCounter = () => {
     const [asyncCount, setCount] = useState({count:0})
 
@@ -27,10 +28,10 @@ export const AsyncCounter = () => {
 
     const asyncPlus =  () => {
         // store.dispatch(getAsyncPlus())
-        store.dispatch(AsyncAction.getAsyncPlus())
+        store.dispatch(action.count.getAsyncPlus())
     }
     const asyncTime =  () => {
-        store.dispatch(AsyncAction.getAsyncTime())
+        store.dispatch(action.count.getAsyncTime())
     }
     const asyncMinus =  () => {
     }

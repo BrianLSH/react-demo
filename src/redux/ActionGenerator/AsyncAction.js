@@ -1,8 +1,10 @@
 import * as Types from '../action-types'
-import {getAsyncPlus} from "./AsyncActionCountGenerator";
+// import {getAsyncPlus} from "./AsyncActionCountGenerator";
 import {ASYNC_COUNT_TIMES} from "../action-types";
 // 引入异步api  处理异步请求
 
+// redux-thunk 处理同步 直接返回一个函数就行
+// 会直接dispatch出去
 const AsyncAction = {
     getAsyncPlus () {
         return (dispatch)=>{
