@@ -1,6 +1,7 @@
 import react, {useEffect, useState} from "react";
 import store from "../../redux/store";
 import {getAsyncPlus} from "../../redux/ActionGenerator/AsyncActionCountGenerator";
+import AsyncAction from "../../redux/ActionGenerator/AsyncAction";
 export const AsyncCounter = () => {
     const [asyncCount, setCount] = useState({count:0})
 
@@ -25,15 +26,23 @@ export const AsyncCounter = () => {
     }, []);
 
     const asyncPlus =  () => {
-        store.dispatch(getAsyncPlus())
+        // store.dispatch(getAsyncPlus())
+        store.dispatch(AsyncAction.getAsyncPlus())
+    }
+    const asyncTime =  () => {
+        store.dispatch(AsyncAction.getAsyncTime())
     }
     const asyncMinus =  () => {
     }
+    const asyncDivide =  () => {
+    }
     return (
         <div>
+            <button onClick={asyncTime}>X</button>
             <button onClick={asyncPlus}>+</button>
             当前值:<span>{asyncCount.count}</span>
             <button onClick={asyncMinus}>-</button>
+            <button onClick={asyncDivide}>÷</button>
         </div>
 
 //     在React中，<button onClick={asyncPlus}>+</button>和 <button onClick={() => asyncPlus()}>+</button>

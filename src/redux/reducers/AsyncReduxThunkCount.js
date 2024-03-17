@@ -4,16 +4,16 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
     switch (action.type) {
-        case 'INCREMENT':
-            console.log('async plus  5秒后')
+        case 'ASYNC_COUNT_INCREMENT':
+            console.log('async plus  2秒后')
             return {
                 ...state,
                 count: state.count + 1
             }
-        case 'DECREMENT':
+        case 'ASYNC_COUNT_TIMES':
             return {
                 ...state,
-                count: state.count - 1
+                count: state.count*2
             }
         default:
             return state
