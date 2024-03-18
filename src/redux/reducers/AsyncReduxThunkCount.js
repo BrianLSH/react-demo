@@ -15,6 +15,11 @@ export default (state = defaultState, action) => {
                 ...state,
                 count: state.count*2
             }
+        case 'ASYNC_COUNT_MINUS':
+            return {
+                ...state,
+                count:state.count-20
+            }
         default:
             return state
     }
