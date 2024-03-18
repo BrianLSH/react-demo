@@ -37,6 +37,7 @@ export const AsyncCounter = () => {
         store.dispatch(action.count.getAsyncMinus())
     }
     const asyncDivide =  () => {
+        store.dispatch(action.divide.getDivideResult())
     }
     return (
         <div>
